@@ -1,0 +1,43 @@
+package pl.edu.wszib.springdemo.properties;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.ConstructorBinding;
+
+@ConstructorBinding
+@ConfigurationProperties(value = "custom2.properties")
+public class CustomProperties2 {
+    private Boolean disabled = false;
+
+    private String color;
+
+    private CustomProperties2 customProperties2;
+
+    public CustomProperties2(Boolean disabled,
+                             String color,
+                             CustomProperties2 customProperties2) {
+        this.disabled = disabled;
+        this.color = color;
+        this.customProperties2 = customProperties2;
+    }
+
+    public Boolean getDisabled() {
+        return disabled;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public CustomProperties2 getCustomProperties2() {
+        return customProperties2;
+    }
+
+    public void setCustomProperties2(CustomProperties2 customProperties2) {
+        this.customProperties2 = customProperties2;
+    }
+
+    private static class CustomProperties3 {
+        private String test1;
+        private String test2;
+    }
+}

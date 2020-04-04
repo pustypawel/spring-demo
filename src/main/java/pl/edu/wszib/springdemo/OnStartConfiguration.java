@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
 public class OnStartConfiguration {
 
     @Bean
-    public OnStart on123Start(MyProperties myProperties) {
-        return new OnStart(helloPrinter(), myProperties);
+    public OnStart on123Start() {
+        return new OnStart(helloPrinter());
     }
 
     @Bean
@@ -16,5 +16,6 @@ public class OnStartConfiguration {
         return new HelloPrinter();
     }
 }
-//@Primary
-//@Qualifier
+//@Primary - oznacza beana jako "główny"
+//@Qualifier - pozwala wstrzyknąć beana przez nazwę (istotne gdy mamy kilka beanów tej samej klasy)
+//@Value - wartość z properties
