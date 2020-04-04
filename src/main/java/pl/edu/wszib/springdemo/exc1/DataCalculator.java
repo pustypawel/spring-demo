@@ -6,6 +6,7 @@ import java.util.List;
 
 @Component
 class DataCalculator {
+
     Integer calculate(List<Integer> numbers) {
         return numbers.stream()
                 .mapToInt(Integer::intValue)

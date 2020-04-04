@@ -4,6 +4,9 @@ import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.annotation.Configuration;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 @Configuration
 public class BeanCycleExample implements InitializingBean, DisposableBean {
     @Override
